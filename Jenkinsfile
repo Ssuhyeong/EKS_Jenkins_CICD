@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {nodejs 'NodeJS 22.4.1'}
 
-      // 해당 스크립트 내에서 사용할 로컬 변수들 설정
+    // 해당 스크립트 내에서 사용할 로컬 변수들 설정
     // 레포지토리가 없으면 생성됨
     // Credential들에는 젠킨스 크레덴셜에서 설정한 ID를 사용
     environment {
@@ -35,8 +35,8 @@ pipeline {
 
         stage("Build") {
             steps {
-                sh "sudo npm install"
-                sh "sudo npm run build"
+                sh "npm install"
+                sh "npm run build"
             }
         }
 
