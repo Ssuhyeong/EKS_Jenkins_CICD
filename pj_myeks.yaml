@@ -5,7 +5,7 @@ kind: ClusterConfig
 metadata:
   name: project-myeks
   region: ap-northeast-2
-  version: '1.30.3'
+  version: '1.30'
 
 # AZ
 availabilityZones: ['ap-northeast-2a', 'ap-northeast-2b', 'ap-northeast-2c']
