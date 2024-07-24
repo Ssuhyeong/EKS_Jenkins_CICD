@@ -8,7 +8,7 @@ metadata:
   version: '1.30'
 
 # AZ
-availabilityZones: ['ap-northeast-2a', 'ap-northeast-2b', 'ap-northeast-2c']
+availabilityZones: ['ap-northeast-2a', 'ap-northeast-2c']
 
 # IAM OIDC & Service Account
 iam:
