@@ -26,7 +26,7 @@ spec:
                       - production
       containers:
         - name: nestjs-app
-          image: sonsuhyeong/node:40
+          image: sonsuhyeong/node:41
           ports:
             - containerPort: 3000
           env:
