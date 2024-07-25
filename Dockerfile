@@ -1,26 +1,26 @@
-# docker의 이미지를 정의, 해당 프로젝트에서 node 22 버전을 사용
-FROM node:22
+# Builder stage
+FROM node:22-alpine as builder
+RUN apk --no-cache add --virtual builds-deps build-base
 
-# /app 이라는 폴더에서 프로젝트를 실행할 예정이므로 mkdir 명령어로 폴더를 생성
-RUN mkdir -p /app
-
-# /app 이라는 폴더에서 프로젝트를 실행
-WORKDIR /app
-
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
+WORKDIR /usr/src/app
 COPY package*.json ./
 
-# Dockerfile이 위치한 폴더의 모든 내용을 /app으로 복사
+# Install dependencies
+RUN npm install --silent
 COPY . .
 
-# 프로젝트에서 사용한 패키지를 package.json 을 통하여 모두 설치
-RUN npm install
-
-# 프로젝트를 빌드
+# Build application
 RUN npm run build
 
-# 프로젝트에서 3000번 포트를 사용한다는 의미
-EXPOSE 3000
+# Production stage
+FROM node:22-alpine
 
-# 빌드 이후에 dist라는 폴더에 main.js가 생성되므로 해당 파일을 실행
-CMD [ "node", "dist/main.js" ]
+WORKDIR /usr/src/app
+
+# Copy the built application files from the builder stage
+COPY --from=builder /usr/src/app/dist ./dist
+COPY --from=builder /usr/src/app/node_modules ./node_modules
+
+EXPOSE 4949
+
+CMD [ "node", "./dist/main" ]
