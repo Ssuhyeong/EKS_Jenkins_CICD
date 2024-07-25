@@ -7,6 +7,9 @@ RUN mkdir -p /app
 # /app 이라는 폴더에서 프로젝트를 실행
 WORKDIR /app
 
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+COPY package*.json ./
+
 # Dockerfile이 위치한 폴더의 모든 내용을 /app으로 복사
 COPY . .
 
