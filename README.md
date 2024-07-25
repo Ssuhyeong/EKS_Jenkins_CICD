@@ -48,6 +48,11 @@
 
 ![image](https://github.com/user-attachments/assets/123ca127-3375-4d9c-980c-de847edded14)
 
+### Slack 연동
+
+![image](https://github.com/user-attachments/assets/92d6ed08-4836-4497-aee9-c063eb2ecbb3)
+
+
 ### AlgoCD
 
 ![image](https://github.com/user-attachments/assets/cf865b7b-7102-4036-9b0d-ea4e44140196)
