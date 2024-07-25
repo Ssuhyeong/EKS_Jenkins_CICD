@@ -25,7 +25,8 @@
     "@nestjs/platform-express": "^10.0.0",
     "iconv-lite": "^0.6.3",
     "reflect-metadata": "^0.2.0",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "utils": "^0.3.1"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
