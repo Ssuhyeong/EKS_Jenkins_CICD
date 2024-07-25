@@ -9,7 +9,7 @@ pipeline {
         dockerHubRegistry = 'sonsuhyeong/node' 
         dockerHubRegistryCredential = 'docker' 
         githubCredential = 'git_hub'
-        gitEmail = 'tngud124@kakao.com'
+        gitEmail = 'tngud124@gmail.com'
         gitName = 'Ssuhyeong'
     }
  
