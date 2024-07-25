@@ -98,10 +98,10 @@ pipeline {
                 sh "git config --global user.name ${gitName}"
                 sh "sed -i 's/node:.*/node:${currentBuild.number}/g' deploy/production.yaml"
                 sh "git add ."
-                sh "git commit -m 'fix:${dockerHubRegistry} ${currentBuild.number} image versioning'"https://github.com/seongwoo-choi/eks-ci-cd-project/tree/main/src
+                sh "git commit -m 'fix:${dockerHubRegistry} ${currentBuild.number} image versioning'"
                 sh "git branch -M main"
                 sh "git remote remove origin"
-                sh "git remote origin git@github.com:Ssuhyeong/EKS_Jenkins_CICD.git"
+                sh "git remote origin git@github.com:Ssuhyeong/EKS_Jenkins_CICD_.git"
                 sh "git push -u origin main"
             }
             post {
