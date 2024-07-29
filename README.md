@@ -1,4 +1,4 @@
-# EKS github CI/CD 구축
+# EKS bitbucket CI/CD 구축
 
 <aside>
   
@@ -17,9 +17,9 @@
 
 - AWS 매니지드 서비스를 사용하다 보면 커스터마이징을 하는 부분에 제약이 많다.
 - EKS를 사용하면 그러한 제약이 없도록 구성하여 이식성을 그대로 가져갈 수 있도록 구성되었다.
-    - 클라우드 환경에서 k8s를 서비스 해주면 “managed Kubernetes”라고 불리며 관리형 쿠버네트스인데 Control panel을 클라우드 서비스 벤더사에서 관리해준다.
+    - 클라우드 환경에서 k8s를 서비스 해주면 “managed Kubernetes”라고 불리며 관리형 쿠버네티스인데 Control panel을 클라우드 서비스 벤더사에서 관리해준다.
     - EKS는 AWS에서 제공하는 “Managed Kubernetes”이다.
-        - 쿠버네트스를 구축하고 관리할 때는 마스터 노드 및 etcd를 이중화, 삼중화 하는것이 매우 중요하다. 하지만 EKS에서는 마스터노드와 etcd 노드를 관리해주고 Private Link로 연결되어 내부망 통신으로 안전하고 워커노드와 통신 할 수 있다.
+        - 쿠버네티스를 구축하고 관리할 때는 마스터 노드 및 etcd를 이중화, 삼중화 하는것이 매우 중요하다. 하지만 EKS에서는 마스터노드와 etcd 노드를 관리해주고 Private Link로 연결되어 내부망 통신으로 안전하고 워커노드와 통신 할 수 있다.
 
 ![image](https://github.com/user-attachments/assets/50e30e05-cd4a-420a-9974-2d76d7bebba6)
 
@@ -28,11 +28,11 @@
 
 # CI / CD 파이프라인 아키텍처
 
-![Untitled](https://github.com/user-attachments/assets/798d2058-dfff-4e46-b486-e8da13fcb7b2)
+<img width="750" alt="bitbucket" src="https://github.com/user-attachments/assets/e8c8f75e-5139-43e5-833f-68991dc8499e">
 
-- 개발자가 깃허브에 코드를  PUSHgksek.
-- Jenkins를 Github에 연결하고, Jenkins는 Github repository에 commit된 내용을 감지한다.
-- Pipeline을 생성하고 Github에 위치한 Jenkinsfile 스크립트를 찾아 자동 실행되게 설정한다.
+- 개발자가 bitbucket에 코드를  PUSH하고.
+- Jenkins를 bitbucket에 연결하고, Jenkins는 bitbucket repository에 commit된 내용을 감지한다.
+- Pipeline을 생성하고 bitbucket에 위치한 Jenkinsfile 스크립트를 찾아 자동 실행되게 설정한다.
 - Dockerfile을 참조해 image를 빌드한다.
 - Docker image를 참조해 image를 빌드한다.
 - Docker image를 Docker Hub에 push한다.
