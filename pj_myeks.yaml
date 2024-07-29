@@ -42,7 +42,7 @@ managedNodeGroups:
     privateNetworking: true
     ssh:
       allow: true
-      publicKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC5QueY9WCgI9uOtbi/FLHpYFnavLgHkVJAeIjt+uJ9Alsnh8w+R6R4qFflAinWuQJ7eDtHVKlMoby3YyjXrFEr6asT/fnFxw3+AKHHKLIf5YLJHNFmCjYmFMvXlklhLlw1olqrKnAho3nfRLBWhnAn+DxPFByoZl44cVyu/7RS7nNLZMossYZXg8dpSGs1p5ss1psBDQwiTf7XF4wz+ResviTaEl9GRkj4ya5ew/ba2iHZbMynhtkAO3ty/TjnpOx5kJua1jYRU59cWdm/W+aCxdS7keDZOp421aEeR6q1geZMVLYUHRaFgoj0aogFJX/svUFnZ7PZe/OIE/icaG2N0nniFAddecVhj392HBWxj0gyX8TbNwwNo1d9/ggiMPLxCcHGnH9dnbfjIpOScgEB1gLcOQc4WvmR+pUTX05O89K3/6QWlBWZpvhwSPU6NJOA/bWf5uPlGhP/Hd4h5d/m2tje9hkPstcpNtu7EF9AfSF669yIbAs05V1ovle+cYU= root@jenkins'
+      publicKey: '{sshkeyCode}'
     availabilityZones: ['ap-northeast-2a', 'ap-northeast-2b', 'ap-northeast-2c']
     iam:
       withAddonPolicies:
