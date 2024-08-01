@@ -28,7 +28,7 @@
 
 # CI / CD 파이프라인 아키텍처
 
-<img width="750" alt="bitbucket" src="https://github.com/user-attachments/assets/e8c8f75e-5139-43e5-833f-68991dc8499e">
+![Group 32956](https://github.com/user-attachments/assets/aea758d4-7cad-4c29-a105-672b203e2fe2)
 
 - 개발자가 bitbucket에 코드를  PUSH하고.
 - Jenkins를 bitbucket에 연결하고, Jenkins는 bitbucket repository에 commit된 내용을 감지한다.
